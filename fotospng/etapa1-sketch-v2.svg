@@ -1,0 +1,21 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="100" height="100" rx="26" fill="#FFE4F0"/>
+  <!-- Folha de papel -->
+  <rect x="28" y="22" width="64" height="76" rx="6" fill="white" stroke="#FFB3D4" stroke-width="2"/>
+  <!-- Linhas de esboço tracejadas -->
+  <line x1="38" y1="42" x2="82" y2="42" stroke="#FF9EC4" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5,3"/>
+  <line x1="38" y1="55" x2="74" y2="55" stroke="#FF9EC4" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5,3"/>
+  <line x1="38" y1="68" x2="78" y2="68" stroke="#FF9EC4" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="5,3"/>
+  <!-- Esboço de rosto kawaii simples -->
+  <circle cx="60" cy="58" r="18" fill="none" stroke="#FFB3D4" stroke-width="2" stroke-dasharray="4,3"/>
+  <circle cx="54" cy="54" r="2.5" fill="#FF9EC4"/>
+  <circle cx="66" cy="54" r="2.5" fill="#FF9EC4"/>
+  <path d="M54,63 Q60,68 66,63" stroke="#FF9EC4" stroke-width="2" fill="none" stroke-linecap="round" stroke-dasharray="3,2"/>
+  <!-- Lápis pequeno no canto -->
+  <g transform="rotate(-45, 88, 88)">
+    <rect x="84" y="74" width="8" height="22" rx="2" fill="#FF6B9D"/>
+    <path d="M84,96 L88,108 L92,96 Z" fill="#FFD6EB"/>
+    <path d="M86,103 L88,109 L90,103 Z" fill="#FF6B9D"/>
+    <rect x="83" y="72" width="10" height="4" rx="2" fill="#FFB3D4"/>
+  </g>
+</svg>

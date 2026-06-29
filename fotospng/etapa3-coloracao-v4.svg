@@ -1,0 +1,54 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="paletteGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD6EB"/>
+      <stop offset="100%" style="stop-color:#FFC2E0"/>
+    </linearGradient>
+    <linearGradient id="brushGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9EC4"/>
+      <stop offset="100%" style="stop-color:#FF6B9D"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#FF6B9D" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo -->
+  <rect x="10" y="10" width="100" height="100" rx="26" fill="#FFE4F0"/>
+
+  <!-- Paleta formato orgânico -->
+  <path d="M62,24 C82,24 98,38 98,56 C98,70 90,80 78,84 C74,86 70,86 68,82 C66,78 68,74 66,72 C64,70 60,72 58,72 C46,72 28,66 24,54 C20,42 30,24 62,24 Z" fill="url(#paletteGrad)" stroke="#FFB3D4" stroke-width="2" filter="url(#shadow)"/>
+
+  <!-- Buraco do polegar -->
+  <ellipse cx="42" cy="76" rx="10" ry="8" fill="#FFE4F0" stroke="#FFB3D4" stroke-width="1.5"/>
+
+  <!-- Manchas de cor na paleta — dispostas em arco -->
+  <circle cx="48" cy="36" r="9" fill="#FF6B9D"/>
+  <circle cx="66" cy="30" r="9" fill="#FF9EC4"/>
+  <circle cx="83" cy="38" r="9" fill="#FFB3D4"/>
+  <circle cx="90" cy="56" r="9" fill="#FFD6EB" stroke="#FFB3D4" stroke-width="1"/>
+  <circle cx="80" cy="70" r="9" fill="#FFC2E0"/>
+
+  <!-- Brilhinhos nas manchas -->
+  <circle cx="45" cy="33" r="3" fill="white" opacity="0.4"/>
+  <circle cx="63" cy="27" r="3" fill="white" opacity="0.4"/>
+  <circle cx="80" cy="35" r="3" fill="white" opacity="0.4"/>
+
+  <!-- Pincel cruzando a paleta -->
+  <g transform="rotate(40, 30, 95)">
+    <!-- Cabo do pincel -->
+    <rect x="24" y="50" width="7" height="46" rx="3.5" fill="url(#brushGrad)"/>
+    <!-- Detalhe brilho cabo -->
+    <rect x="26" y="53" width="2" height="38" rx="1" fill="white" opacity="0.25"/>
+    <!-- Anel metálico -->
+    <rect x="23" y="93" width="9" height="5" rx="2" fill="#FF6B9D"/>
+    <!-- Cerdas do pincel -->
+    <path d="M24,98 Q27.5,112 31,98 Z" fill="#FF9EC4"/>
+    <path d="M25,100 Q27.5,114 30,100" stroke="#FF6B9D" stroke-width="1" fill="none"/>
+    <!-- Ponta com tinta -->
+    <ellipse cx="27.5" cy="113" rx="3" ry="4" fill="#FF6B9D"/>
+  </g>
+
+  <!-- Gotinha de tinta saindo do pincel -->
+  <path d="M22,94 Q22,100 18,103 C16,105 14,103 14,101 C14,98 18,94 22,94 Z" fill="#FF6B9D" opacity="0.7"/>
+</svg>

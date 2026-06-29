@@ -1,0 +1,15 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="100" height="100" rx="26" fill="#FFE4F0"/>
+  <!-- Traços limpos e expressivos -->
+  <!-- Linha grossa principal -->
+  <path d="M22,75 Q40,30 60,45 Q80,60 98,25" stroke="#FF6B9D" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Linha média -->
+  <path d="M22,88 Q50,60 75,72 Q90,80 98,65" stroke="#FF9EC4" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <!-- Linha fina -->
+  <path d="M30,98 Q55,82 80,90 Q90,94 98,82" stroke="#FFB3D4" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Ponta de caneta no início da linha principal -->
+  <g transform="translate(22,75) rotate(-60)">
+    <path d="M0,0 L-5,14 L5,14 Z" fill="#FF6B9D"/>
+    <rect x="-5" y="14" width="10" height="10" rx="2" fill="#FF9EC4"/>
+  </g>
+</svg>

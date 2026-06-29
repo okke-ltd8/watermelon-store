@@ -1,0 +1,32 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Traço sendo desenhado (linha curva) -->
+  <path d="M18,90 Q35,60 55,70 Q75,80 85,45" stroke="#FFD6EB" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- Caneta inclinada -->
+  <!-- Corpo da caneta -->
+  <g transform="rotate(-40, 60, 60)">
+    <!-- Tampa/topo -->
+    <rect x="52" y="10" width="16" height="22" rx="4" fill="#FF6B9D"/>
+    <!-- Corpo principal -->
+    <rect x="52" y="30" width="16" height="52" rx="3" fill="#FF9EC4"/>
+    <!-- Detalhe brilho no corpo -->
+    <rect x="55" y="33" width="4" height="44" rx="2" fill="white" opacity="0.3"/>
+    <!-- Anel de separação -->
+    <rect x="51" y="78" width="18" height="5" rx="2" fill="#FF6B9D"/>
+    <!-- Ponta cônica -->
+    <path d="M52,83 L60,105 L68,83 Z" fill="#FF6B9D"/>
+    <!-- Ponta metálica -->
+    <path d="M56,98 L60,110 L64,98 Z" fill="#FFB3D4"/>
+    <!-- Ponto de tinta (bico) -->
+    <circle cx="60" cy="111" r="2.5" fill="#FF6B9D"/>
+    <!-- Clipe da caneta -->
+    <rect x="64" y="14" width="4" height="30" rx="2" fill="#FF6B9D"/>
+    <circle cx="66" cy="44" r="3.5" fill="#FF6B9D"/>
+  </g>
+
+  <!-- Estrelinhas de brilho ao redor da ponta -->
+  <line x1="88" y1="80" x2="88" y2="88" stroke="#FF9EC4" stroke-width="2" stroke-linecap="round"/>
+  <line x1="84" y1="84" x2="92" y2="84" stroke="#FF9EC4" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="78" cy="92" r="2.5" fill="#FFB3D4" opacity="0.8"/>
+  <circle cx="96" cy="75" r="2" fill="#FF6B9D" opacity="0.6"/>
+</svg>

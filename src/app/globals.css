@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --wm-pink: #FF4F87;
+  --wm-pink-light: #FFF0F5;
+  --wm-green: #48C774;
+  --wm-green-light: #F0FFF6;
+  --wm-red: #FF5C5C;
+  --wm-dark: #0D1117;
+  --wm-card: #161B22;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-inter), system-ui, sans-serif; }
+  h1, h2, h3, h4 { font-family: var(--font-nunito), system-ui, sans-serif; font-weight: 700; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-watermelon-pink text-white rounded-full px-6 py-2.5 font-medium
+           hover:bg-watermelon-pink-dark transition-all duration-200 active:scale-95
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-watermelon-green text-white rounded-full px-6 py-2.5 font-medium
+           hover:bg-watermelon-green-dark transition-all duration-200 active:scale-95;
+  }
+  .btn-outline {
+    @apply border-2 border-watermelon-pink text-watermelon-pink rounded-full px-6 py-2.5 font-medium
+           hover:bg-watermelon-pink-light transition-all duration-200 active:scale-95;
+  }
+  .card {
+    @apply bg-white rounded-2xl border border-watermelon-border shadow-sm
+           hover:shadow-md transition-shadow duration-200;
+  }
+  .input {
+    @apply w-full bg-watermelon-bg border border-watermelon-border rounded-xl px-4 py-2.5
+           text-sm text-watermelon-dark placeholder:text-watermelon-muted
+           focus:outline-none focus:border-watermelon-pink transition-colors duration-200;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+  .badge-pink { @apply badge bg-watermelon-pink text-white; }
+  .badge-green { @apply badge bg-watermelon-green text-white; }
+  .badge-outline { @apply badge border border-watermelon-border text-watermelon-muted; }
+  .section-title {
+    @apply text-xl font-bold text-watermelon-dark font-display;
+  }
+  .page-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .seed {
+    @apply inline-block w-2 h-2.5 bg-watermelon-dark rounded-full opacity-80
+           rotate-12 mx-0.5;
+  }
+}
+
+@layer utilities {
+  .text-gradient-pink {
+    @apply bg-gradient-to-r from-watermelon-pink to-watermelon-red
+           bg-clip-text text-transparent;
+  }
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, #FF4F87 0%, #FF7BAC 50%, #48C774 100%);
+  }
+  .scrollbar-hide { scrollbar-width: none; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+}
+
+/* Watermelon seed loader */
+.wm-loader {
+  display: flex; gap: 6px; align-items: center; justify-content: center;
+}
+.wm-loader span {
+  width: 8px; height: 10px;
+  background: var(--wm-pink);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: seedBounce 1.2s ease-in-out infinite;
+}
+.wm-loader span:nth-child(2) { animation-delay: .15s; background: var(--wm-green); }
+.wm-loader span:nth-child(3) { animation-delay: .3s; }
+
+@keyframes seedBounce {
+  0%, 80%, 100% { transform: scale(0.8) translateY(0); }
+  40% { transform: scale(1.1) translateY(-6px); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #e0e0e0; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--wm-pink); }
