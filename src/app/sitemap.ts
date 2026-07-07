@@ -1,20 +1,32 @@
 import { MetadataRoute } from 'next'
 import { prisma } from '@/lib/prisma'
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://watermelon.art'
 
-  const products = await prisma.product.findMany({
-    where: { active: true },
-    select: { slug: true, updatedAt: true },
-  })
+  // Tentar buscar produtos/categorias do banco; se falhar, gerar sitemap mínimo
+  let products: { slug: string; updatedAt: Date }[] = []
+  let categories: { slug: string }[] = []
 
-  const visibleCategorySlugs = ['botons', 'photocards', 'marca-paginas', 'chaveiros', 'ilustracoes', 'adesivos']
+  try {
+    products = await prisma.product.findMany({
+      where: { active: true },
+      select: { slug: true, updatedAt: true },
+    })
 
-  const categories = await prisma.category.findMany({
-    where: { active: true, slug: { in: visibleCategorySlugs } },
-    select: { slug: true },
-  })
+    const visibleCategorySlugs = ['botons', 'photocards', 'marca-paginas', 'chaveiros', 'ilustracoes', 'adesivos']
+
+    categories = await prisma.category.findMany({
+      where: { active: true, slug: { in: visibleCategorySlugs } },
+      select: { slug: true },
+    })
+  } catch (err) {
+    // Falha ao acessar o banco (build environment ou credenciais). Logamos e geramos sitemap estático.
+    // Não interrompemos o build para evitar falha de deploy por erro de DB.
+    // eslint-disable-next-line no-console
+    console.error('Sitemap: falha ao buscar dados do banco, retornando sitemap estático.', err)
+    products = []
+    categories = []
+  }
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'daily', priority: 1 },

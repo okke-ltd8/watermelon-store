@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { Instagram, MessageCircle, Mail } from 'lucide-react'
 
@@ -9,8 +10,10 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-10 h-10 bg-watermelon-pink rounded-full flex items-center justify-center font-bold text-xl">W</span>
-              <span className="text-xl font-bold font-display">Watermelon Art</span>
+              <div className="relative w-10 h-10 rounded-full overflow-hidden bg-white shadow-sm">
+                <Image src="/logoloja.jpeg" alt="watermelon.ens" fill className="object-cover" />
+              </div>
+              <span className="text-xl font-bold font-display">watermelon.ens</span>
             </div>
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
               Arte kawaii digital feita com amor. Botons, photocards, marca páginas e chaveiros criativos para seu espaço digital.
@@ -59,7 +62,7 @@ export function Footer() {
             <span className="seed" />
             <span className="seed" />
             <span className="seed" />
-            <span>Watermelon Art © 2025 — Feito com muito amor</span>
+            <span>watermelon.ens © 2025 — Feito com muito amor</span>
           </div>
           <div className="flex items-center gap-4">
             <span>🔒 Pagamento seguro</span>

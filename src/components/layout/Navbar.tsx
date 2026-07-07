@@ -31,9 +31,9 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-bold text-lg text-watermelon-pink font-display">
           <div className="relative w-12 h-12 bg-white rounded-full overflow-hidden shadow-sm">
-            <Image src="/logoloja.jpeg" alt="Watermelon Art" fill className="object-cover" />
+            <Image src="/logoloja.jpeg" alt="watermelon.ens" fill className="object-cover" />
           </div>
-          <span className="hidden sm:block">Watermelon</span>
+          <span className="hidden sm:block">watermelon.ens</span>
         </Link>
 
         {/* Desktop links */}

@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 import { Navbar } from '@/components/layout/Navbar'
+export const dynamic = 'force-dynamic'
 import LojaPageClient from './LojaPageClient'
 import { prisma } from '@/lib/prisma'
 import type { Category } from '@/types'

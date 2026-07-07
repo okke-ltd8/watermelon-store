@@ -26,9 +26,9 @@ export interface Category {
   id: string
   name: string
   slug: string
-  description?: string
-  icon?: string
-  image?: string
+  description?: string | null
+  icon?: string | null
+  image?: string | null
   active: boolean
   sortOrder: number
   _count?: { products: number }
